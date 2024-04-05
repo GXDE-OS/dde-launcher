@@ -91,7 +91,7 @@ install(FILES src/dbusservices/com.deepin.dde.Launcher.service DESTINATION /usr/
 install(FILES data/deepin-launcher.svg DESTINATION /usr/share/icons/hicolor/scalable/apps)
 
 ## Launcher Chooser
-install(FILES data/dde-launcher DESTINATION /usr/bin/dde-launcher)
+install(FILES data/dde-launcher DESTINATION /usr/bin)
 
 # bin
 install(TARGETS ${BIN_NAME} DESTINATION bin)
