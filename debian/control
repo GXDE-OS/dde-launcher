@@ -26,7 +26,8 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  lastore-daemon,
- deepin-desktop-schemas (>= 3.1.11)
+ deepin-desktop-schemas (>= 3.1.11),
+ dde-launcher-wayland
 Conflicts: dde-workspace (<< 2.90.5)
 Description: deepin desktop-environment - launcher module
  Deepin desktop environment 2015 - launcher module.

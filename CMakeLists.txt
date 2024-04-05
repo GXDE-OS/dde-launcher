@@ -23,7 +23,7 @@ if (DEFINED WITHOUT_UNINSTALL_APP)
     add_definitions(-DWITHOUT_UNINSTALL_APP)
 endif ()
 
-set(BIN_NAME dde-launcher)
+set(BIN_NAME dde-launcher-x11)
 
 # Sources files
 file(GLOB_RECURSE SRCS "src/*.h" "src/*.cpp")
@@ -90,5 +90,9 @@ install(FILES src/dbusservices/com.deepin.dde.Launcher.service DESTINATION /usr/
 ## icon
 install(FILES data/deepin-launcher.svg DESTINATION /usr/share/icons/hicolor/scalable/apps)
 
+## Launcher Chooser
+install(FILES data/dde-launcher DESTINATION /usr/bin/dde-launcher)
+
 # bin
 install(TARGETS ${BIN_NAME} DESTINATION bin)
+
