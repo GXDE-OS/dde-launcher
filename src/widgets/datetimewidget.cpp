@@ -26,6 +26,7 @@
 #include <DGuiApplicationHelper>
 
 DWIDGET_USE_NAMESPACE
+DGUI_USE_NAMESPACE
 
 DatetimeWidget::DatetimeWidget(QWidget *parent)
     : QWidget(parent),

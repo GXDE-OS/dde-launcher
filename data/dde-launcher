@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-if [[ $WAYLAND_DISPLAY != "" ]] | [[ $XDG_SESSION_WAYLAND == "wayland" ]]; then
+if [[ $WAYLAND_DISPLAY != "" ]] || [[ $XDG_SESSION_WAYLAND == "wayland" ]]; then
 	dde-launcher-wayland $@
 	exit
 fi

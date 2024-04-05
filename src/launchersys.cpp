@@ -44,11 +44,11 @@ LauncherSys::LauncherSys(QObject *parent)
     , m_sessionManagerInter(new com::deepin::SessionManager(SessionManagerService, SessionManagerPath, QDBusConnection::sessionBus(), this))
     , m_windowLauncher(nullptr)
     , m_fullLauncher(nullptr)
-    , m_regionMonitor(new DRegionMonitor(this))
+    , m_regionMonitor(new Dtk::Gui::DRegionMonitor(this))
     , m_autoExitTimer(new QTimer(this))
     , m_ignoreRepeatVisibleChangeTimer(new QTimer(this))
 {
-    m_regionMonitor->setCoordinateType(DRegionMonitor::Original);
+    m_regionMonitor->setCoordinateType(Dtk::Gui::DRegionMonitor::Original);
 
     m_autoExitTimer->setInterval(60 * 1000);
     m_autoExitTimer->setSingleShot(true);
@@ -181,7 +181,7 @@ bool LauncherSys::eventFilter(QObject *watched, QEvent *event)
 }
 
 void LauncherSys::registerRegion() {
-    m_regionMonitorConnect = connect(m_regionMonitor, &DRegionMonitor::buttonPress, this, [=] (const QPoint &p, const int flag) {
+    m_regionMonitorConnect = connect(m_regionMonitor, &Dtk::Gui::DRegionMonitor::buttonPress, this, [=] (const QPoint &p, const int flag) {
         if (flag == MOUSE_LEFTBUTTON) {
             m_launcherInter->regionMonitorPoint(p);
         }

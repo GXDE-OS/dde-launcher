@@ -28,11 +28,13 @@
 
 #include <QObject>
 #include <QTimer>
-#include <dregionmonitor.h>
+//#include <dregionmonitor.h>
+#include <DRegionMonitor>
 
 #include <com_deepin_sessionmanager.h>
 
 DGUI_USE_NAMESPACE
+//DWIDGET_USE_NAMESPACE
 
 class LauncherInterface;
 class WindowedFrame;
