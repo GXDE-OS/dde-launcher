@@ -23,6 +23,7 @@
 
 #include "miniframebottombar.h"
 
+#include <DApplication>
 #include <DDesktopServices>
 
 #if (DTK_VERSION >= DTK_VERSION_CHECK(2, 0, 8, 0))
