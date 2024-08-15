@@ -21,6 +21,7 @@
 
 #include "avatar.h"
 
+#include <QPainterPath>
 #include <QPaintEvent>
 #include <QPainter>
 #include <QDebug>

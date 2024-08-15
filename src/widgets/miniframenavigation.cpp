@@ -23,6 +23,7 @@
 
 #include "miniframenavigation.h"
 
+#include <QPainterPath>
 #include <QVBoxLayout>
 #include <QProcess>
 #include <QSignalMapper>
