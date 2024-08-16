@@ -45,6 +45,10 @@ public:
     void showToggle();
     void hideToggle();
 
+    DImageButton *m_toggleCategoryBtn;
+    DImageButton *m_toggleModeBtn;
+    SearchLineEdit* m_searchEdit;
+
 public slots:
     void clearSearchContent();
 
@@ -53,11 +57,9 @@ signals:
     void toggleMode();
 
   private:
-    SearchLineEdit* m_searchEdit;
     QFrame *m_leftSpacing;
     QFrame *m_rightSpacing;
-    DImageButton *m_toggleCategoryBtn;
-    DImageButton *m_toggleModeBtn;
+
 };
 
 #endif // SEARCHWIDGET_H
