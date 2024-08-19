@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+if [[ $WAYLAND_DISPLAY != "" ]] || [[ $XDG_SESSION_WAYLAND == "wayland" ]] || [[ -e $HOME/.config/gxde/gxde-launcher/use_20_launcher ]]; then
+	dde-launcher-wayland $@
+	exit
+fi
+dde-launcher-x11 $@
+
