@@ -11,7 +11,6 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_FLAGS "-g -Wall")
 
-
 if (DEFINED ENABLE_MIEEE)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mieee")
 endif()
@@ -24,7 +23,7 @@ if (DEFINED WITHOUT_UNINSTALL_APP)
     add_definitions(-DWITHOUT_UNINSTALL_APP)
 endif ()
 
-set(BIN_NAME dde-launcher)
+set(BIN_NAME dde-launcher-x11)
 
 # Sources files
 file(GLOB_RECURSE SRCS "src/*.h" "src/*.cpp")
@@ -41,8 +40,6 @@ if (NOT (${CMAKE_BUILD_TYPE} MATCHES "Debug"))
     execute_process(COMMAND bash "translate_generation.sh"
                     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
 endif ()
-
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DQT_DEBUG")
 
 # dev
 file(GLOB INTERFACES "src/dbusinterface/*.h")
@@ -93,5 +90,9 @@ install(FILES src/dbusservices/com.deepin.dde.Launcher.service DESTINATION /usr/
 ## icon
 install(FILES data/deepin-launcher.svg DESTINATION /usr/share/icons/hicolor/scalable/apps)
 
+## Launcher Chooser
+install(FILES data/dde-launcher DESTINATION /usr/bin)
+
 # bin
 install(TARGETS ${BIN_NAME} DESTINATION bin)
+

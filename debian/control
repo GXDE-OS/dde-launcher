@@ -1,7 +1,7 @@
 Source: dde-launcher
 Section: x11
 Priority: optional
-Maintainer: Deepin Packages Builder <packages@deepin.com>
+Maintainer: gfdgd_xi <3025613752@qq.com>
 Build-Depends:
  debhelper (>= 8.0.0),
  pkg-config,
@@ -12,10 +12,11 @@ Build-Depends:
  libqt5svg5-dev,
  libgsettings-qt-dev,
  qttools5-dev-tools,
- libdtkcore2-dev,
- libdtkwidget2-dev,
+ libdtkcore-dev,
+ libdtkwidget-dev,
  libdframeworkdbus-dev,
- qtbase5-private-dev
+ qtbase5-private-dev,
+ libdtkgui-dev
 Standards-Version: 3.9.8
 Homepage: http://www.deepin.org/
 
@@ -25,7 +26,7 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  lastore-daemon,
- deepin-desktop-schemas (>= 3.1.11)
+ deepin-desktop-schemas (>= 3.1.11),
+ dde-launcher-wayland
 Conflicts: dde-workspace (<< 2.90.5)
-Description: deepin desktop-environment - launcher module
- Deepin desktop environment 2015 - launcher module.
+Description: GXDE desktop-environment - launcher module
