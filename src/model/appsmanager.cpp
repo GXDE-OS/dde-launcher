@@ -420,7 +420,7 @@ void AppsManager::uninstallAppWithUninstaller(const QString &appKey)
         return;
     }*/
     QProcess *process = new QProcess();
-    process->start("pkexec", QStringList() << "gxde-app-uninstaller" << appKey);
+    process->start("pkexec", QStringList() << "gxde-app-uninstaller" << "desktop-name" << appKey);
     process->waitForStarted();
     /*connect(process, &QProcess::finished, this, [=](){
 
