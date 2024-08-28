@@ -88,6 +88,7 @@ public slots:
     void searchApp(const QString &keywords);
     void launchApp(const QModelIndex &index);
     void uninstallApp(const QString &appKey);
+    void uninstallAppWithUninstaller(const QString &appKey);
     const ItemInfoList appsInfoList(const AppsListModel::AppCategory &category) const;
 
     bool appIsNewInstall(const QString &key);

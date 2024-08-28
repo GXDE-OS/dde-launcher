@@ -27,6 +27,7 @@ Depends:
  ${misc:Depends},
  lastore-daemon,
  deepin-desktop-schemas (>= 3.1.11),
- dde-launcher-wayland
+ dde-launcher-wayland,
+ gxde-app-uninstaller
 Conflicts: dde-workspace (<< 2.90.5)
 Description: GXDE desktop-environment - launcher module

@@ -42,6 +42,8 @@
 #include <DApplication>
 #include <QScopedPointer>
 
+#include <QProcess>
+
 DWIDGET_USE_NAMESPACE
 
 QPointer<AppsManager> AppsManager::INSTANCE = nullptr;
@@ -409,6 +411,22 @@ void AppsManager::launchApp(const QModelIndex &index)
         m_startManagerInter->LaunchWithTimestamp(appDesktop, QX11Info::getTimestamp());
 }
 
+void AppsManager::uninstallAppWithUninstaller(const QString &appKey)
+{
+    // 判断是否安装 gxde-app-uninstaller
+    /*if (!QFile::exists("/usr/bin/gxde-app-uninstaller")) {
+        // 如果没有安装则走默认途径
+        m_launcherInter->RequestUninstall(appKey, false);
+        return;
+    }*/
+    QProcess *process = new QProcess();
+    process->start("pkexec", QStringList() << "gxde-app-uninstaller" << appKey);
+    process->waitForStarted();
+    /*connect(process, &QProcess::finished, this, [=](){
+
+    });*/
+}
+
 void AppsManager::uninstallApp(const QString &appKey)
 {
     // refersh auto start cache
@@ -425,7 +443,7 @@ void AppsManager::uninstallApp(const QString &appKey)
     stashItem(appKey);
 
     // request backend
-    m_launcherInter->RequestUninstall(appKey, false);
+    uninstallAppWithUninstaller(appKey);
 
     emit dataChanged(AppsListModel::All);
 
