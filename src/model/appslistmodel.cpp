@@ -74,6 +74,7 @@ const QStringList sysHoldPackages()
                              << "gxde-wm-multitaskingview"
                              << "gxde-calendar"
                              << "gxde-terminal"
+                             << "x11vnc"
                              << "kwin-wm-multitaskingview"
                              << "fantascene-dynamic-wallpaper";
 
