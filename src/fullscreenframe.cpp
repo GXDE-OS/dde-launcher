@@ -1074,31 +1074,12 @@ void FullScreenFrame::uninstallApp(const QModelIndex &context)
 
     m_isConfirmDialogShown = true;
 
-    DTK_WIDGET_NAMESPACE::DDialog unInstallDialog;
-    unInstallDialog.setWindowFlags(Qt::Dialog | unInstallDialog.windowFlags());
-    unInstallDialog.setWindowModality(Qt::WindowModal);
-
     const QString appKey = context.data(AppsListModel::AppKeyRole).toString();
-    QString appName = context.data(AppsListModel::AppNameRole).toString();
-    unInstallDialog.setTitle(QString(tr("Are you sure you want to uninstall %1 ?")).arg(appName));
-    QPixmap appIcon = context.data(AppsListModel::AppDialogIconRole).value<QPixmap>();
-    unInstallDialog.setIconPixmap(appIcon);
 
-    QStringList buttons;
-    buttons << tr("Cancel") << tr("Confirm");
-    unInstallDialog.addButtons(buttons);
-
-    //    connect(&unInstallDialog, SIGNAL(buttonClicked(int, QString)), this, SLOT(handleUninstallResult(int, QString)));
-    connect(&unInstallDialog, &DTK_WIDGET_NAMESPACE::DDialog::buttonClicked, [&](int clickedResult) {
-        // 0 means "cancel" button clicked
-        if (clickedResult == 0)
-            return;
 
         m_appsManager->uninstallApp(appKey);
-    });
 
-    unInstallDialog.exec();
-    //    unInstallDialog.deleteLater();
+
     m_isConfirmDialogShown = false;
 }
 
