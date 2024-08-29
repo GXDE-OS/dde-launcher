@@ -65,7 +65,15 @@ const QStringList sysHoldPackages()
                              << "deepin-wm-multitaskingview"
                              << "dde-calendar"
                              << "deepin-manual"
-                             << "deepin-terminal"
+                             << "gxde-control-center"
+                             << "gxde-computer"
+                             << "gxde-trash"
+                             << "gxde-file-manager"
+                             << "spark-store"
+                             << "gxde-toggle-desktop"
+                             << "gxde-wm-multitaskingview"
+                             << "gxde-calendar"
+                             << "gxde-terminal"
                              << "kwin-wm-multitaskingview"
                              << "fantascene-dynamic-wallpaper";
 
