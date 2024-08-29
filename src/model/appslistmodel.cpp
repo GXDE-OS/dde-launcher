@@ -66,7 +66,8 @@ const QStringList sysHoldPackages()
                              << "dde-calendar"
                              << "deepin-manual"
                              << "deepin-terminal"
-                             << "kwin-wm-multitaskingview";
+                             << "kwin-wm-multitaskingview"
+                             << "fantascene-dynamic-wallpaper";
 
     return holds_list;
 }
