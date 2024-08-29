@@ -1,11 +1,13 @@
 /*
  * Copyright (C) 2017 ~ 2018 Deepin Technology Co., Ltd.
- *
+ * Copyright (C) 2023 ~ 2024 gfdgd-xi
  * Author:     sbw <sbw@sbw.so>
  *
  * Maintainer: sbw <sbw@sbw.so>
  *             kirigaya <kirigaya@mkacg.com>
  *             Hualet <mr.asianwang@gmail.com>
+               gfdgd-xi
+               shenmo
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -420,7 +422,7 @@ void AppsManager::uninstallAppWithUninstaller(const QString &appKey)
         return;
     }*/
     QProcess *process = new QProcess();
-    process->start("pkexec", QStringList() << "gxde-app-uninstaller" << appKey);
+    process->start("pkexec", QStringList() << "gxde-app-uninstaller" << "desktop-name" << appKey);
     process->waitForStarted();
     /*connect(process, &QProcess::finished, this, [=](){
 
@@ -440,7 +442,8 @@ void AppsManager::uninstallApp(const QString &appKey)
     }
 
     // begin uninstall, remove icon first.
-    stashItem(appKey);
+    // Hey but this cause fullscreen frame app lost even you choose cancel the uninstall. So fuck it
+    //stashItem(appKey);
 
     // request backend
     uninstallAppWithUninstaller(appKey);
