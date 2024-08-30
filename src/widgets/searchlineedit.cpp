@@ -28,6 +28,7 @@
 #include <QEvent>
 #include <QTimer>
 #include <QResizeEvent>
+#include <QRegExpValidator>
 
 SearchLineEdit::SearchLineEdit(QWidget *parent) :
     QLineEdit(parent)
@@ -80,6 +81,13 @@ SearchLineEdit::SearchLineEdit(QWidget *parent) :
     connect(this, &SearchLineEdit::textChanged, this, &SearchLineEdit::onTextChanged);
     connect(m_clear, &DImageButton::clicked, this, &SearchLineEdit::normalMode);
 
+#ifdef __aarch64__
+    // 不显示符号 ÿ
+    connect(this, &SearchLineEdit::textChanged, this, [this](){
+        this->setText(this->text().replace("ÿ", ""));
+    });
+#endif
+
 #ifndef ARCH_MIPSEL
     m_floatAni = new QPropertyAnimation(m_floatWidget, "pos", this);
     m_floatAni->setDuration(260);
@@ -104,7 +112,34 @@ bool SearchLineEdit::event(QEvent *e)
     default:;
     }
 
+
     return QLineEdit::event(e);
+}
+
+void SearchLineEdit::keyPressEvent(QKeyEvent *e)
+{
+#ifdef __aarch64__
+    // 用于重新实现删除文字
+    QKeyEvent *keyEvent = static_cast<QKeyEvent*>(e);
+    if (keyEvent->key() == Qt::Key_Backspace) {
+        this->setText(this->text().left(this->text().count() - 1));
+        return;
+    }
+#endif
+    QLineEdit::keyPressEvent(e);
+}
+
+void SearchLineEdit::keyReleaseEvent(QKeyEvent *e)
+{
+#ifdef __aarch64__
+    // 用于重新实现删除文字
+    QKeyEvent *keyEvent = static_cast<QKeyEvent*>(e);
+    if (keyEvent->key() == Qt::Key_Backspace) {
+        this->setText(this->text().left(this->text().count() - 1));
+        return;
+    }
+#endif
+    QLineEdit::keyReleaseEvent(e);
 }
 
 void SearchLineEdit::resizeEvent(QResizeEvent *e)

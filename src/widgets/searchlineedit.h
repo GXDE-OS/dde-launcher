@@ -66,6 +66,8 @@ private slots:
 protected:
     bool event(QEvent *e);
     void resizeEvent(QResizeEvent *e);
+    void keyPressEvent(QKeyEvent *e);
+    void keyReleaseEvent(QKeyEvent *e);
 
 private:
     DImageButton *m_icon;
