@@ -1,8 +1,8 @@
-dde-launcher (5.0.18) UNRELEASED; urgency=medium
+dde-launcher (5.0.18gxde1) UNRELEASED; urgency=medium
 
-  * Test
+  * Repair arm input problem
 
- -- gfdgd_xi <3025613752@qq.com>  Fri, 30 Aug 2024 16:18:15 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Sat, 31 Aug 2024 08:48:35 +0800
 
 dde-launcher (5.0.17) unstable; urgency=low
 
