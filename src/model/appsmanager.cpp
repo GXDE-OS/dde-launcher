@@ -388,6 +388,7 @@ void AppsManager::searchApp(const QString &keywords)
 void AppsManager::launchApp(const QModelIndex &index)
 {
     const QString appDesktop = index.data(AppsListModel::AppDesktopRole).toString();
+    qDebug() << appDesktop;
     QString appKey = index.data(AppsListModel::AppKeyRole).toString();
     markLaunched(appKey);
 

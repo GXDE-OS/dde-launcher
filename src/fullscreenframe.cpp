@@ -50,7 +50,7 @@
 #include "sharedeventfilter.h"
 
 DTK_USE_NAMESPACE
-DGUI_USE_NAMESPACE
+//DGUI_USE_NAMESPACE
 
 static const QString WallpaperKey = "pictureUri";
 static const QString DisplayModeKey = "display-mode";

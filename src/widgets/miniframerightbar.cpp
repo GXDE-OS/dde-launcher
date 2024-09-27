@@ -35,7 +35,8 @@
 #else
 #include <QProcess>
 #endif
-DGUI_USE_NAMESPACE
+DTK_USE_NAMESPACE
+//DGUI_USE_NAMESPACE
 MiniFrameRightBar::MiniFrameRightBar(QWidget *parent)
     : QWidget(parent)
 

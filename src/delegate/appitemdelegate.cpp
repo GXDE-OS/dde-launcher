@@ -34,8 +34,8 @@
 
 #include <DSvgRenderer>
 
-//DWIDGET_USE_NAMESPACE
-DGUI_USE_NAMESPACE
+DWIDGET_USE_NAMESPACE
+//DGUI_USE_NAMESPACE
 
 QModelIndex AppItemDelegate::CurrentIndex = QModelIndex();
 
