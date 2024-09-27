@@ -1,3 +1,9 @@
+dde-launcher (5.0.19) UNRELEASED; urgency=medium
+
+  * Adapt to new gxde-app-uninstaller
+
+ -- gfdgd_xi <3025613752@qq.com>  Sat, 31 Aug 2024 08:48:35 +0800
+
 dde-launcher (5.0.18gxde1) UNRELEASED; urgency=medium
 
   * Repair arm input problem
