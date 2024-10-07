@@ -1,3 +1,8 @@
+dde-launcher (5.0.20) UNRELEASED; urgency=medium
+
+  * Remove dependency dde-launcher-wayland
+
+ -- shenmo <shenmo@spark-app.store>  Sat, 31 Aug 2024 08:48:35 +0800
 dde-launcher (5.0.19) UNRELEASED; urgency=medium
 
   * Adapt to new gxde-app-uninstaller
