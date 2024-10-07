@@ -1,8 +1,8 @@
-dde-launcher (5.0.19) UNRELEASED; urgency=medium
+dde-launcher (5.0.20) UNRELEASED; urgency=medium
 
-  * Adapt to new gxde-app-uninstaller
+  * Remove 20 launcher
 
- -- gfdgd_xi <3025613752@qq.com>  Sat, 31 Aug 2024 08:48:35 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Mon, 07 Oct 2024 22:16:37 +0800
 
 dde-launcher (5.0.18gxde1) UNRELEASED; urgency=medium
 
