@@ -1,4 +1,14 @@
-dde-launcher (5.0.20) UNRELEASED; urgency=medium
+dde-launcher (5.0.21) UNRELEASED; urgency=medium
+
+  [ shenmo ]
+  * Remove dependency dde-launcher-wayland
+
+  [ gfdgd_xi ]
+  * Remove scripts
+
+ -- gfdgd_xi <3025613752@qq.com>  Mon, 07 Oct 2024 22:17:56 +0800
+
+dde-launcher (5.0.19) UNRELEASED; urgency=medium
 
   * Remove 20 launcher
 
