@@ -60,7 +60,6 @@ const QStringList sysHoldPackages()
                              << "dde-computer"
                              << "dde-trash"
                              << "dde-file-manager"
-                             << "deepin-appstore"
                              << "deepin-toggle-desktop"
                              << "deepin-wm-multitaskingview"
                              << "dde-calendar"
@@ -74,9 +73,7 @@ const QStringList sysHoldPackages()
                              << "gxde-wm-multitaskingview"
                              << "gxde-calendar"
                              << "gxde-terminal"
-                             << "x11vnc"
-                             << "kwin-wm-multitaskingview"
-                             << "fantascene-dynamic-wallpaper";
+                             << "kwin-wm-multitaskingview";
 
     return holds_list;
 }

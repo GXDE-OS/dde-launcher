@@ -1,7 +1,8 @@
-dde-launcher (5.0.21) UNRELEASED; urgency=medium
+dde-launcher (5.0.22) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * Remove dependency dde-launcher-wayland
+  * Enable uninstall x11vnc fantascene deepin-app-store 
 
   [ gfdgd_xi ]
   * Remove scripts
