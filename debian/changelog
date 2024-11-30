@@ -1,4 +1,4 @@
-dde-launcher (5.0.23) UNRELEASED; urgency=medium
+dde-launcher (5.0.24) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * Remove dependency dde-launcher-wayland
@@ -8,7 +8,7 @@ dde-launcher (5.0.23) UNRELEASED; urgency=medium
   * Remove scripts
   * 修复缺失翻译文件的问题
 
- -- gfdgd_xi <3025613752@qq.com>  Sun, 24 Nov 2024 11:58:34 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Sat, 30 Nov 2024 14:53:05 +0800
 
 dde-launcher (5.0.19) UNRELEASED; urgency=medium
 
