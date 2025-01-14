@@ -78,7 +78,7 @@ target_link_libraries(${BIN_NAME} PRIVATE
 )
 
 ## qm files
-file(GLOB_RECURSE QM_FILES "translations/*.qm")
+file(GLOB QM_FILES "translations/*.qm")
 install(FILES ${QM_FILES} DESTINATION share/dde-launcher/translations)
 
 ## dev files
