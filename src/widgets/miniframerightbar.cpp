@@ -29,6 +29,7 @@
 #include <QEvent>
 #include <QApplication>
 #include <QDesktopWidget>
+#include <QDBusMessage>
 
 #if (DTK_VERSION >= DTK_VERSION_CHECK(2, 0, 8, 0))
 #include <DDBusSender>
@@ -36,7 +37,11 @@
 #include <QProcess>
 #endif
 DTK_USE_NAMESPACE
-//DGUI_USE_NAMESPACE
+
+#define CHROOTCHECKDESTINATION "com.gxde.daemon.system.info"
+#define CHROOTCHECKPATH "/com/gxde/daemon/system/info"
+#define CHROOTCHECKINTERFACE "com.gxde.daemon.system.info"
+
 MiniFrameRightBar::MiniFrameRightBar(QWidget *parent)
     : QWidget(parent)
 
@@ -97,6 +102,16 @@ MiniFrameRightBar::MiniFrameRightBar(QWidget *parent)
 
     bottomLayout->addWidget(m_settingsBtn);
     bottomLayout->addWidget(m_powerBtn);
+
+    // 判断是否在 Chroot 下运行，如果是则不显示电源按钮
+    QDBusMessage checkChrootDBus = QDBusMessage::createMethodCall(CHROOTCHECKDESTINATION,
+                     CHROOTCHECKPATH,
+                     CHROOTCHECKINTERFACE,
+                     "IsInChroot");
+    QDBusMessage res = QDBusConnection::sessionBus().call(checkChrootDBus);
+    if (res.arguments().at(0).toBool()) {
+        m_powerBtn->setHidden(1);
+    }
 
     QWidget *top_widget = new QWidget;
     QHBoxLayout *top_layout = new QHBoxLayout;

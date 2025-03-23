@@ -1,14 +1,10 @@
-dde-launcher (5.0.26) UNRELEASED; urgency=medium
+dde-launcher (5.0.27) UNRELEASED; urgency=medium
 
-  [ shenmo ]
-  * Remove dependency dde-launcher-wayland
-  * Enable uninstall x11vnc fantascene deepin-app-store 
-
-  [ gfdgd_xi ]
   * Remove scripts
   * 尝试修复缺失翻译文件的问题
+  * 在 chroot 环境下不显示电源按键
 
- -- gfdgd_xi <3025613752@qq.com>  Tue, 14 Jan 2025 22:34:37 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Sun, 23 Mar 2025 15:28:19 +0800
 
 dde-launcher (5.0.19) UNRELEASED; urgency=medium
 
