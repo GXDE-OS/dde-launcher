@@ -15,8 +15,8 @@ SYSTYPE=$(shell cat /etc/deepin-version | grep Type= | awk -F'=' '{print $$2}')
 
 override_dh_auto_install:
 	dh_auto_install $@
-	mkdir -pv $(CURDIR)/debian/dde-launcher/usr/share/dde-launcher/translations
-	cp -v translations/dde-launcher*.qm $(CURDIR)/debian/dde-launcher/usr/share/dde-launcher/translations
+	mkdir -pv $(CURDIR)/debian/gxde-launcher/usr/share/gxde-launcher/translations
+	cp -v translations/gxde-launcher*.qm $(CURDIR)/debian/gxde-launcher/usr/share/gxde-launcher/translations
 
 ifeq ($(DEB_BUILD_ARCH), sw_64)
 override_dh_auto_configure:

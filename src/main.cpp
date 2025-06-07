@@ -61,7 +61,7 @@ int main(int argv, char *args[])
     DApplication app(argv, args);
     app.setQuitOnLastWindowClosed(false);
     app.setOrganizationName("deepin");
-    app.setApplicationName("dde-launcher");
+    app.setApplicationName("gxde-launcher");
     app.setApplicationVersion("3.0");
     app.setTheme("dark");
     app.loadTranslator();
@@ -72,7 +72,7 @@ int main(int argv, char *args[])
     DLogManager::registerFileAppender();
 #endif
 
-    bool quit = !app.setSingleInstance(QString("dde-launcher_%1").arg(getuid()));
+    bool quit = !app.setSingleInstance(QString("gxde-launcher_%1").arg(getuid()));
 
     QCommandLineOption showOption(QStringList() << "s" << "show", "show launcher(hide for default.)");
     QCommandLineOption toggleOption(QStringList() << "t" << "toggle", "toggle launcher visible.");

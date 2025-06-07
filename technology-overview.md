@@ -1,9 +1,9 @@
 
-# dde-launcher 开发文档
+# gxde-launcher 开发文档
 
 # 整体设计
 
-由于 `dde-launcher` 需要在全屏模式和窗口模式来回切换，并且还注册了 DBus 服务。为了方便处理，使用 `LauncherSys` 作为中心控制类。
+由于 `gxde-launcher` 需要在全屏模式和窗口模式来回切换，并且还注册了 DBus 服务。为了方便处理，使用 `LauncherSys` 作为中心控制类。
 
 根据当前需要，`LauncherSys` 将选择性的切换显示全屏与窗口模式的实例。同时，DBus 服务也绑定在这个对象上，在调用时根据当前情况将对应的操作进行分发。
 

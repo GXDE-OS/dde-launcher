@@ -52,8 +52,8 @@ QPointer<AppsManager> AppsManager::INSTANCE = nullptr;
 
 QGSettings AppsManager::LAUNCHER_SETTINGS("com.deepin.dde.launcher", "", nullptr);
 QSet<QString> AppsManager::APP_AUTOSTART_CACHE;
-QSettings AppsManager::APP_USER_SORTED_LIST("deepin", "dde-launcher-app-sorted-list", nullptr);
-QSettings AppsManager::APP_USED_SORTED_LIST("deepin", "dde-launcher-app-used-sorted-list");
+QSettings AppsManager::APP_USER_SORTED_LIST("deepin", "gxde-launcher-app-sorted-list", nullptr);
+QSettings AppsManager::APP_USED_SORTED_LIST("deepin", "gxde-launcher-app-used-sorted-list");
 static constexpr int USER_SORT_UNIT_TIME = 3600; // 1 hours
 
 int perfectIconSize(const int size)

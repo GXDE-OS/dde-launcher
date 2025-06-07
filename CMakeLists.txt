@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.7)
 
 set(VERSION 4.0)
 
-project(dde-launcher)
+project(gxde-launcher)
 
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_STANDARD 14)
@@ -23,7 +23,7 @@ if (DEFINED WITHOUT_UNINSTALL_APP)
     add_definitions(-DWITHOUT_UNINSTALL_APP)
 endif ()
 
-set(BIN_NAME dde-launcher)
+set(BIN_NAME gxde-launcher)
 
 # Sources files
 file(GLOB_RECURSE SRCS "src/*.h" "src/*.cpp")
@@ -79,10 +79,10 @@ target_link_libraries(${BIN_NAME} PRIVATE
 
 ## qm files
 file(GLOB QM_FILES "translations/*.qm")
-install(FILES ${QM_FILES} DESTINATION share/dde-launcher/translations)
+install(FILES ${QM_FILES} DESTINATION share/gxde-launcher/translations)
 
 ## dev files
-install (FILES ${INTERFACES} DESTINATION include/dde-launcher)
+install (FILES ${INTERFACES} DESTINATION include/gxde-launcher)
 
 ## services files
 install(FILES src/dbusservices/com.deepin.dde.Launcher.service DESTINATION /usr/share/dbus-1/services)
@@ -91,7 +91,7 @@ install(FILES src/dbusservices/com.deepin.dde.Launcher.service DESTINATION /usr/
 install(FILES data/deepin-launcher.svg DESTINATION /usr/share/icons/hicolor/scalable/apps)
 
 ## Launcher Chooser
-#install(FILES data/dde-launcher DESTINATION /usr/bin)
+#install(FILES data/gxde-launcher DESTINATION /usr/bin)
 
 # bin
 install(TARGETS ${BIN_NAME} DESTINATION bin)
