@@ -26,7 +26,7 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  lastore-daemon,
- deepin-desktop-schemas (>= 3.1.11),
+ gxde-desktop-schemas (>= 3.1.11),
  gxde-app-uninstaller
 Conflicts: dde-workspace (<< 2.90.5), dde-launcher
 Provides: dde-launcher
