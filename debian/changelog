@@ -1,4 +1,4 @@
-gxde-launcher (5.0.29) UNRELEASED; urgency=medium
+gxde-launcher (5.0.29-1) UNRELEASED; urgency=medium
 
   * Remove scripts
   * 尝试修复缺失翻译文件的问题

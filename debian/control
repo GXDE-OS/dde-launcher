@@ -14,7 +14,7 @@ Build-Depends:
  qttools5-dev-tools,
  libdtkcore-dev,
  libdtkwidget2-dev,
- libdframeworkdbus-dev,
+ libgxframeworkdbus-dev,
  qtbase5-private-dev,
  qttools5-dev-tools
 Standards-Version: 3.9.8
