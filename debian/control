@@ -25,7 +25,7 @@ Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- lastore-daemon,
+ gxde-shell-tools,
  gxde-desktop-schemas (>= 3.1.11),
  gxde-app-uninstaller
 Conflicts: dde-workspace (<< 2.90.5), dde-launcher (>> 5.0.29-2)
